@@ -44,9 +44,9 @@ class VkRequesterServiceProvider extends ServiceProvider
 
         $this->app->singleton(Auth::class, function () {
             return new Auth(
-                config('services.vkontakte.client_id'),
-                config('services.vkontakte.client_secret'),
-                config('services.vkontakte.redirect'),
+                config('services.vkontakte-requester.client_id'),
+                config('services.vkontakte-requester.client_secret'),
+                config('services.vkontakte-requester.redirect'),
                 implode(',', config('vk-requester.scope', []))
             );
         });
